@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.0.3.final using JasperReports Library version 6.0.3  -->
+<!-- 2015-03-13T11:33:54 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="test" pageWidth="612" pageHeight="792" columnWidth="572" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="535c5c1f-2a8b-4ab1-afb2-a07ecdbb1a60">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="cartera" class="java.lang.String">
+		<parameterDescription><![CDATA[Cart]]></parameterDescription>
+	</parameter>
+	<parameter name="prod" class="java.lang.String">
+		<parameterDescription><![CDATA[productor]]></parameterDescription>
+		<defaultValueExpression><![CDATA[1]]></defaultValueExpression>
+	</parameter>
+	<parameter name="mont" class="java.lang.String">
+		<parameterDescription><![CDATA[monto]]></parameterDescription>
+	</parameter>
+	<parameter name="has" class="java.lang.String"/>
+	<parameter name="ubcana" class="java.lang.String">
+		<parameterDescription><![CDATA[ubica caña]]></parameterDescription>
+	</parameter>
+	<parameter name="letra" class="java.lang.String">
+		<parameterDescription><![CDATA[MONTO EN LETRAS]]></parameterDescription>
+	</parameter>
+	<parameter name="montTot" class="java.lang.String"/>
+	<parameter name="ubprod" class="java.lang.String"/>
+	<parameter name="fecha" class="java.lang.String"/>
+	<parameter name="cve" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<detail>
+		<band height="697" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="572" height="100" forecolor="#000000" uuid="8a7e05ee-a723-40bc-b41d-4814f109bd76"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["CONTRATO DE CREDITO SIMPLE CON GARANTIAS NUMERO "+$P{cartera}+", QUE CELEBRAN POR UNA PARTE, LA UNION LOCAL DE PRODUCTORES DE CAÑA DE AZÚCAR C.N.C. DEL INGENIO HUIXTLA A.C., EN LO SUCESIVO LA 'MANDANTE O ACREDITANTE', REPRESENTADA EN ESTE ACTO POR EL PRESIDENTE DEL COMITÉ EJECUTIVO, SR. ABRAHAM ESCOBAR ARIAS; POR OTRA PARTE EL SEÑOR(A) "+$P{prod}+" POR SU PROPIO DERECHO, A QUIEN EN LO SUCESIVO SE DENOMINARÁ EL 'ACREDITADO', Y DE UNA TERCERA PARTE, LA UNIDAD INDUSTRIAL DE LA EMPRESA DENOMINADA INGENIO DE HUIXTLA S.A. DE C.V., EN LO SUCESIVO LA 'MANDATARIA O INGENIO', REPRESENTADA EN ESTE ACTO POR SU APODERADO, SR. ENRIQUE VIVANCO LOZANO; NOMBRÁNDOSE EN CONJUNTO COMO LAS 'PARTES'; Y SUJETÁNDOSE A LAS SIGUIENTES DECLARACIONES Y CLÁUSULAS:"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="100" width="572" height="15" forecolor="#000000" uuid="bbc06456-5235-4157-b7ca-ea5b1711414b"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<text><![CDATA[DECLARACIONES]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="115" width="572" height="155" forecolor="#000000" uuid="ea1c310d-ceeb-4a8f-8e22-59aa13243140"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["I .Declara la MANDANTE O ACREDITANTE por conducto de su representante legal bajo protesta de decir verdad que: a) Que se constituyó legalmente como se acredita con la escritura pública No. 23,523 del 23 de febrero de 2005, otorgada ante la fe del Lic. Alejandro E. del Valle Palazuelos, Notario Público No. 149 de México, Distrito Federal, inscrita en el Registro Público de la Propiedad y del Comercio de Huixtla, Chiapas, en la sección tercera, bajo el Numero 05, libro uno, el 02 de Mayo de 2005; b) Que el  Sr. Abraham Escobar Arias, con el carácter de Presidente del Comité Ejecutivo, cuenta con facultades suficientes para la firma del presente contrato, como lo acredita en términos de la Escritura Pública No. 53,728 del 04 de Noviembre de 2010, otorgada ante la fe del Lic. Javier E. del Valle Palazuelos, Notario Público No. 61 de México, Distrito Federal, inscrita en el Registro Público de la Propiedad y del Comercio de Huixtla, Chiapas, en la sección tercera, bajo el número 59, libro uno, con fecha 03 de diciembre de 2010,y por sus generales, manifestó ser mexicano, mayor de edad y funcionario de la ACREDITANTE; c) Que con fecha 22 de Diciembre de 2014, celebró con la Financiera Nacional de Desarrollo Agropecuario, Rural, Forestal y Pesquero (antes Financiera Rural), en lo sucesivo LA FINANCIERA, el Contrato de Apertura de Crédito en Cuenta Corriente para Descuento de Cartera número 606700000910000, para el Descuento de Cartera de Créditos Simples para el Mantenimiento de hasta 2,486.24 hectáreas de socas y resocas zafras 2015/2016, 2016/2017 y 2017/2018."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="270" width="572" height="90" forecolor="#000000" uuid="98ef9050-0139-4d63-99f9-29fbf8f62c0c"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["II. Declara El ACREDITADO bajo protesta de decir verdad que: a) Que es una persona física, con plena capacidad legal para celebrar el presente contrato y para cumplir las obligaciones que en el mismo se establecen; b) Es productor de caña de azúcar y asociado de la ACREDITANTE; c) Que ha solicitado a la ACREDITANTE el establecimiento en su favor de un préstamo de CREDITO SIMPLE con garantías hasta por la cantidad de $"+$P{mont}+" para destinarlo al mantenimiento de socas y resocas que se menciona en el presente Contrato. d) Es Propietario, colono, ejidatario o arrendatario de una superficie de "+$P{has}+" has. ubicadas en: ("+$P{ubcana}+"), Estado de Chiapas, como lo acredita con el documento que le exhibe a la MANDANTE O ACREDITANTE en este acto. "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="360" width="572" height="150" forecolor="#000000" uuid="477f6ab1-1419-4e8a-b3e8-bc2ca06a0068"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["III. Declara la MANDATARIA O INGENIO por conducto de su representante legal bajo protesta de decir verdad que: a) Que su representante, el señor ENRIQUE VIVANCO LOZANO, acredita su carácter de Apoderado mediante escritura pública No. 48,002 del 11 de Octubre de 2013, otorgada ante la fe del Lic. Jorge R. Limón Luengas, Notario Público No. 02 de Córdoba, Veracruz, documento que fue inscrito en el Registro Público de la Propiedad y del Comercio Delegación Huixtla, Chiapas, bajo el número 55, libro uno, del 18 de Diciembre de 2013, y en virtud del mismo, cuenta con facultades suficientes para la firma del presente contrato; b) Que con fecha 22 de Diciembre de 2014 celebró con la MANDANTE O ACREDITANTE, un Contrato de Mandato Irrevocable contenido en la escritura pública número 900, de fecha 29 de enero del 2015, otorgada ante la fe del Lic. Manuel David David, Notario Público número 12, de Huixtla, Estado de Chiapas; derivado del Contrato a que se ha hecho referencia en la Declaración I, inciso c), para que ejecute a nombre y por cuenta de aquella entre otras, la retención del porcentaje correspondiente al asociado ACREDITADO en el presente instrumento, por concepto de preliquidación y liquidación final para realizar los pagos de capital e intereses del presente crédito, en términos de la instrucción otorgada por el propio asociado ACREDITADO, derivado del Contrato Uniforme Compra-Venta y de Siembra, Cultivo, Cosecha, Entrega y Recepción de Caña de Azúcar (Contrato Uniforme)."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="510" width="572" height="70" forecolor="#000000" uuid="b1b348fd-1c84-47c8-92cc-d99f9c1c1af0"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["IV. Declaran LAS PARTES que al amparo de este contrato, se formaliza la dispersión de recursos del crédito que LA FINANCIERA otorgó a su ACREDITADA, quien que en este acto actúa como ACREDITANTE ante sus agremiados, y esta última ha obtenido la investigación en el BURO DE CREDITO por cada productor beneficiado y cuyo resultado no considera antecedentes negativos. Asimismo, el ACREDITADO tiene celebrado Contrato Uniforme de Compra-Venta y de Siembra, Cultivo, Cosecha, Entrega y Recepción de Caña de Azúcar (Contrato Uniforme), sancionado por el Comité de Producción y Calidad Cañera, en virtud del cual se encuentran obligados a abastecer de caña al INGENIO."]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="590" width="572" height="20" forecolor="#000000" uuid="6d3ddac1-a31a-4a1a-84ad-737ceea76259"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<text><![CDATA[Expuesto lo anterior, los comparecientes celebran el presente Contrato de conformidad con las siguientes:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="610" width="572" height="15" forecolor="#000000" uuid="97173eda-84a6-4330-a4f7-54a90f1ef4c9"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<text><![CDATA[CLAUSULAS]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="625" width="572" height="55" forecolor="#000000" uuid="586923a4-2281-41dd-9339-f948b91b5953"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["PRIMERA.- APERTURA DE CRÉDITO. La ACREDITANTE para cumplir con el objeto de dispersión del contrato que tiene suscrito en términos de las Declaraciones del presente instrumento, otorga al ACREDITADO un crédito SIMPLE con garantías hasta por la cantidad de $"+$P{mont}+" ("+$P{letra}+") el cual no incluye intereses, comisiones y gastos que origine su ejercicio y que deba cubrir el ACREDITADO."]]></textFieldExpression>
+			</textField>
+			<break>
+				<reportElement x="0" y="689" width="100" height="1" forecolor="#000000" uuid="e9c6138c-74c6-40a8-ae62-5f31f87e380a"/>
+			</break>
+		</band>
+		<band height="680">
+			<textField>
+				<reportElement x="0" y="0" width="572" height="50" forecolor="#000000" uuid="88f684ee-908d-4934-8b2b-8b87501eea1e"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["SEGUNDA.- DESTINO. El ACREDITADO se obliga a destinar el importe del crédito para el mantenimiento de socas y resocas de caña de azúcar, en el terreno y superficie precisada en el inciso d) de la Declaración II. El costo total de la inversión será de $"+$P{montTot}+" obligándose el ACREDITADO  a aportar las cantidades complementarias para consolidar el proyecto"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="50" width="572" height="440" uuid="a14ff7ef-74d3-4158-af1b-ab9db5caa350"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<text><![CDATA[TERCERA.- PLAZO.  El plazo de duración de este Contrato será hasta el 31 de agosto del 2015, contando a partir de la fecha de su firma.
+CUARTA.- DISPOSICIÓN DEL CRÉDITO. El ACREDITADO podrá disponer del crédito concedido mediante la suscripción de pagarés a favor de la ACREDITANTE mismos que coincidirán con los montos y vencimientos de las amortizaciones pactadas, las cuales no podrán exceder a la vigencia del presente contrato y bajo los mismos términos recibidos a su vez por la ACREDITANTE. Los referidos pagarés serán de tipo causal y en consecuencia no constituyen novación, modificación o extinción de las obligaciones que el ACREDITADO ha contraído a favor de la ACREDITANTE en este Contrato. En caso de que por cualquier causa se dé por terminado este Contrato o se declare su vencimiento anticipado en los mismos términos, la ACREDITANTE dará por vencidos anticipadamente los pagarés.
+QUINTA.- DESCUENTO. El ACREDITADO faculta de manera expresa conforme a lo dispuesto por el artículo 299 de la Ley General de Títulos y Operaciones de Crédito a la ACREDITANTE para transmitir, endosar, ceder, descontar o negociaren cualquier otra forma parcial o totalmente, aún antes del vencimiento del presente Contrato, los derechos en su favor derivados de éste y de los pagarés que documenten las disposiciones del crédito. Asimismo declara el ACREDITADO que está conforme y advertido por la ACREDITANTE, que este contrato podrá ser de operación de fondeo y a su vez podrá descontarse con Financiera Nacional de Desarrollo Rural, Forestal y Pesquero (antes Financiera Rural).
+SEXTA.- AMORTIZACIÓN. El ACREDITADO se obliga a reintegrar a la ACREDITANTE el importe total de las disposiciones que realice al amparo de este contrato, en un plazo máximo que no excederá del indicado en la cláusula de plazo del presente instrumento. El monto y la fecha de pago de las disposiciones se harán constar en los pagarés que el ACREDITADO suscriba para acreditar las disposiciones.
+SÉPTIMA.- LUGAR Y FORMA DE PAGO DEL CRÉDITO. Todas las cantidades que el ACREDITADO deba pagar por concepto de capital, comisiones e   intereses, serán pagaderas en la oficina de la ACREDITANTE, ubicada en Av. Aldama y Calle Allende Poniente N° 5, Col. Centro, en Huixtla, Chiapas, C.P. 30640, en días y horas hábiles sin necesidad de requerimiento o cobro previos, debiendo observar lo estipulado en la cláusula novena siguiente. Si la fecha de pago fuere día inhábil el pago deberá realizarse el día hábil siguiente.
+OCTAVA.- CÁLCULO DE INTERESES ORDINARIOS.- LA ACREDITANTE y EL ACREDITADO acuerdan que los intereses ordinarios se causarán a partir de la(s) fecha(s) en que se efectúe(n) la(s) ministración(es) y se calcularán diariamente, haciéndose exigibles en las fechas establecidas en el presente contrato para el pago de intereses, calculándose sobre saldos insolutos del crédito a razón de la tasa de interés anual que se pacte en cada pagaré de disposición.
+Los intereses ordinarios que se generen por las cantidades dispuestas en cada pagaré, se calcularán conforme a la tasa de interés anual que las partes pacten en el propio pagaré hasta su pago total. 
+El ACREDITADO manifiesta su conformidad en que la tasa de interés ordinario anual aplicable se considerará notificada y aceptada por éste, desde el momento en que suscriba el pagaré de la disposición correspondiente. 
+En caso de que las partes pacten en el pagaré correspondiente una tasa de interés variable, acuerdan que la tasa será la que se pacte individualmente en cada uno de los pagarés que se suscriban al efecto, y que será igual a la  resultante de sumar los puntos que determinen las partes a la Tasa de Referencia que se define a continuación.
+Tasa de Referencia.- Tasa TIIE, que equivale a el promedio aritmético  de las cotizaciones diarias de la tasa de interés interbancaria de equilibrio a 28 (veintiocho) días, publicadas por el Banco de México en el Diario Oficial de la Federación, o a través de su página electrónica en la red mundial (Internet), o en cualquier otro medio electrónico, de cómputo o telecomunicación y/o impreso autorizado al efecto por el propio Banco de México, correspondientes al mes inmediato anterior a aquél en que se causen los intereses. 
+En caso de que desaparezca la Tasa TIIE o no se conozca su cotización, será aplicable para el cálculo de intereses, la Tasa de Referencia Sustituta que reemplazará a la originalmente pactada, en el orden de sustitución que a continuación se señala, aplicando el mismo esquema establecido en esta cláusula:
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="490" width="572" height="100" uuid="19828a34-2730-4f7e-a5a1-3de0ef8fece2"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<text><![CDATA[Tasas Sustitutas
+
+1.- Tasa CETES.- La tasa que resulte del promedio aritmético diario de la tasa primaria de los Certificados de la Tesorería de la Federación (CETES) a 28 (veintiocho) días vigentes en cada uno de los días naturales del mes inmediato anterior, al periodo de intereses correspondiente, misma que esta expresada en forma anual. Dicha tasa se ajustará mensualmente el primer día natural de cada mes, de acuerdo con las publicaciones que dé a conocer el Banco de México, a través de su página electrónica en la red mundial (Internet), o en cualquier otro medio electrónico, de cómputo o telecomunicación y/o impreso autorizado al efecto por el propio Banco de México.
+]]></text>
+			</staticText>
+			<break>
+				<reportElement x="0" y="670" width="99" height="1" uuid="f1840ae1-4bde-4eb3-be5e-640abe60fdd9"/>
+			</break>
+		</band>
+		<band height="731">
+			<staticText>
+				<reportElement x="0" y="0" width="572" height="140" uuid="2538e57b-9aa4-47e4-867a-a06a48c6e68d"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<text><![CDATA[2.- Tasa CCP. El Costo de Captación a Plazo de pasivos denominados en moneda nacional que el Banco de México estime representativo del conjunto de las instituciones de banca múltiple y que publique mensualmente en el Diario Oficial de la Federación o a través de su página electrónica en la red mundial (Internet), o en cualquier otro medio electrónico, de cómputo o telecomunicación y/o impreso autorizado al efecto por el propio Banco de México, que hubiere sido aplicable en la fecha de inicio de cada periodo de cálculo respectivo.
+En caso de que desaparezcan las Tasas mencionadas anteriormente se utilizará para el cálculo de los intereses pactados en el presente contrato la que publique el Banco de México en sustitución de éstas.
+Los intereses diarios se calcularán multiplicando el saldo insoluto de cada una de las disposiciones, por la tasa de interés anual determinada, dividiendo lo que resulte del producto del crédito entre 360 días. Los intereses del periodo inicial, serán los comprendidos entre la fecha de la primera disposición hasta el último día inmediato anterior del mes calendario, para los períodos subsecuentes se tomarán los intereses del último día del mes hasta el último día inmediato anterior del siguiente mes. Para el último período de intereses se tomarán del último día del mes hasta el día inmediato anterior al vencimiento de cada uno de los pagarés.
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="140" width="572" height="510" uuid="25e5853e-632b-434d-ab0b-6dafec02301f"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<text><![CDATA[NOVENA.- RETENCIÓN DEL PAGO DEL PRODUCTO. Las partes expresamente acuerdan que la MANDATARIA O INGENIO, conforme al Mandato irrevocable que al respecto tiene celebrado con la ACREDITANTE, retenga y aplique primeramente al pago del saldo insoluto del crédito concedido en términos de este contrato, incluyendo los intereses y gastos que se hubiesen generado, de la suma que le corresponda al ACREDITADO por concepto de pre-liquidación o liquidación de la caña de azúcar; entrega, retención y aplicación que deberán efectuarse a más tardar dentro de las veinticuatro horas en que se realice la pre-liquidación o liquidación mencionada. Dicho importe será depositado en moneda nacional por el INGENIO en virtud de la retención que hará, en cualquiera de las sucursales o portales bancarios siguientes: Bancomer Convenio CIE 627992, Banamex Sucursal 4145 cuenta 25435, Banorte Número de Emisora 06681 Referencia 12165 para cheques, Santander Cuenta No. 65502410572, BANSEFI Referencia - Financiera Nacional de Desarrollo Agropecuario, Rural, Forestal y Pesquero, Banco Azteca Pago referenciado de Financiera Nacional de Desarrollo Agropecuario, Rural, Forestal y Pesquero;  todas a nombre de LA FINANCIERA, y cuyo importe será aplicado para liquidar el presente crédito, que a su vez la ACREDITANTE recibió de la misma  FINANCIERA.
+DÉCIMA.- CONDICIONES.LAS PARTES acuerdan que el presente crédito podrá financiarse con recursos provenientes de Financiera Nacional de Desarrollo Agropecuario, Rural, Forestal y Pesquero (Antes Financiera Rural), o de otro fondeador, que deberán entregarse al ACREDITADO a más tardar en los tres días hábiles siguientes de haberlos recibido; y durante la vigencia del presente Contrato el ACREDITADO deberá cumplir con las siguientes condiciones: a) Aportar recursos propios para complementar el importe de las inversiones; b) Proporcionar en su caso, a la MANDANTE O ACREDITANTE y/o a la MANDATARIA O INGENIO y/o a Financiera Nacional de Desarrollo Agropecuario, Rural, Forestal y Pesquero (antes Financiera Rural) cuando éstas lo soliciten, los estados de contabilidad, documentos y demás información relativa a su préstamo, incluyendo los de sociedades de información crediticia; c) No contraer otros pasivos en tanto que este crédito esté total o parcialmente insoluto, salvo que la ACREDITANTE previamente otorgue autorización por escrito;  d)  Conservar y mantener en condiciones eficientes de servicio su maquinaria, equipo y, en general, todos los elementos de producción que pertenezcan a su negocio, incluyendo las garantías; e) No arrendar, vender, gravar o enajenar los bienes que constituyan la garantía específica en el presente Contrato; f) Contratar por su cuenta, dentro de los 30 (treinta) días naturales que sigan a la fecha de disposición del crédito, un seguro amplio contra daños que ampare los bienes materia de la garantía del financiamiento, que por su naturaleza sean asegurables, designando como único beneficiario  con carácter irrevocable a Financiera Nacional de Desarrollo Agropecuario, Rural, Forestal y Pesquero (antes Financiera Rural), debiendo acreditar los términos de dicha contratación a satisfacción de éste y quedando las pólizas y endosos respectivos en su poder. El seguro será como mínimo por un importe que en todo momento garantice el capital, intereses y demás prestaciones y accesorios legales. En la póliza de seguro se hará constar expresamente para los efectos del artículo 109 de la Ley Sobre el Contrato de Seguro, que el ACREDITADO ha obtenido el importe de este crédito para destinarlo a los fines indicados en la Cláusula Segunda de este Contrato, quedando obligado a dar oportunamente el aviso de siniestro a la compañía aseguradora, en las formas aprobadas, con copia a la ACREDITANTE y a LA FINANCIERA. En caso de que ya exista seguro sobre los bienes en mención, el ACREDITADO se obliga a llevar a cabo las gestiones necesarias para consignar en la póliza correspondiente como único beneficiario en forma irrevocable a Financiera Nacional de Desarrollo Agropecuario, Rural Forestal y Pesquero(antes Financiera Rural), hasta por los montos antes indicados, debiendo entregar a la ACREDITANTE en el plazo convenido en el primer párrafo de esta Cláusula la póliza respectiva, g) Se obliga a que en los proyectos en que se desarrollen financiamientos de Financiera Nacional de Desarrollo Agropecuario, Rural Forestal y Pesquero(antes Financiera Rural), considere y cumpla con los ordenamientos ecológicos tendientes a la preservación, restauración y mejoramiento del medio ambiente, flora y fauna silvestre y acuática, recursos naturales, control de  contaminación, uso de suelo y agua, así como las demás disposiciones previstas en la Ley del Equilibrio Ecológico y Protección del Medio Ambiente; h) Realizar los trabajos de acuerdo con los lineamientos y programas aprobados por el Comité de Producción y Calidad Cañera y en caso contrario faculta expresamente a éste para que designe la persona o personas que ejecuten dichos trabajos; i) La ACREDITANTE y/o el INGENIO durante la vigencia de este contrato tendrán la facultad de intervenir para vigilar y exigir el cumplimiento del mismo; j) Solicitar a la ACREDITANTE en caso de requerirlo, el estado de cuenta respectivo; k) Destinar los recursos que obtenga con el importe del crédito, única y exclusivamente a los fines lícitos para los cuales fueron otorgados en los términos establecidos en el presente instrumento y su pago de principal y accesorios lo efectuará de los mismos recursos, con las gananciales y/o frutos obtenidos con la aplicación del crédito, o en su caso, de fuentes lícitas cuyo origen en determinado momento pueda ser comprobable;]]></text>
+			</staticText>
+			<break>
+				<reportElement x="0" y="725" width="100" height="1" uuid="368c8927-5c61-4a75-ac08-282ee0752b62"/>
+			</break>
+		</band>
+		<band height="705">
+			<staticText>
+				<reportElement x="0" y="0" width="572" height="260" uuid="915dc74c-4c71-4e22-ac67-dc3cb93f88e1"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<text><![CDATA[l) En este acto y conforme a los lineamientos de Financiera Nacional de Desarrollo Agropecuario, Rural Forestal y Pesquero(antes Financiera Rural), el ACREDITADO acepta que de ser aplicable y poder utilizarse la prestación del esquema de cobertura de precios de Financiera Nacional de Desarrollo Agropecuario, Rural Forestal y Pesquero(antes Financiera Rural), conoce y acepta las reglas operación y lineamientos del programa; que a la fecha no tiene ni solicitará apoyo para pagar la misma cobertura subsidiada por el presente programa; que faculta a la  MANDANTE O ACREDITANTE para que a través de Financiera Nacional de Desarrollo Agropecuario, Rural Forestal y Pesquero(antes Financiera Rural) se haga la compra de las coberturas utilizando en su caso los subsidios gubernamentales; que otorga su anuencia para hacerle el cargo de los costos en su cuenta. Para el caso que Financiera Nacional de Desarrollo Agropecuario, Rural Forestal y Pesquero(antes Financiera Rural) identifique compensaciones por la compra de las coberturas, el ACREDITADO faculta a la  MANDANTE O ACREDITANTE una vez recibidas de Financiera Nacional de Desarrollo Agropecuario, Rural Forestal y Pesquero(antes Financiera Rural), se abonen en primera instancia al pago del saldo de los créditos y de haber remanente se entreguen al mismo ACREDITADO; para la cancelación de contratos anteriores, deberá haber compensación a favor, suficiente para la recuperación de la comisión más impuestos, conforme  Financiera Nacional de Desarrollo Agropecuario, Rural Forestal y Pesquero(antes Financiera Rural) entregue la información el estado final de la cobertura y en su caso de las compensaciones recibidas. Finalmente, de detectarse algún incumplimiento o información falsa del ACREDITADO, podrá cancelarse el apoyo o ser requerida su devolución y quedará a discreción de  Financiera Nacional de Desarrollo Agropecuario, Rural Forestal y Pesquero(antes Financiera Rural) su registro en el directorio de personas que pierden su derecho de recibir apoyos hasta subsanar el incumplimiento detectado, y en caso de desvío de recursos, asume las sanciones aplicables; m) el ACREDITADO acepta y ratifica en este acto el compromiso solidario para el caso de que alguno de los otros asociados de la ACREDITANTE por cualquier causa, no alcanzaren a liquidar el importe del crédito dispersado, para que con su parte excedente de la producción sea cubierto el saldo de ese crédito, realizándose entre las partes los ajustes correspondientes, obligándose este acto a comparecer con el carácter de Obligado Solidario en el Contrato de Crédito a que se ha hecho referencia en la Declaración I, inciso c) de este instrumento, celebrado entre la  MANDANTE O ACREDITANTE y LA FINANCIERA ; n) Se cuente con garantía de al menos 15% del crédito, constituida con los alcances de las liquidaciones de la caña.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="260" width="572" height="240" uuid="5beceb94-3825-453a-843d-d255720a933b"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<text><![CDATA[DÉCIMA PRIMERA.- CAUSAS DE VENCIMIENTO ANTICIPADO. Las partes aceptan que el presente Contrato se dará por vencido anticipadamente, haciéndose exigible de inmediato el crédito dispuesto más sus accesorios legales, cuando el ACREDITADO incumpla cualquiera de los siguientes casos:
+a) Si no destinare el importe del crédito a los fines descritos en la cláusula segunda; b) Si deja de pagar oportunamente las amortizaciones correspondientes de capital, los intereses y los gastos que se causen en virtud de este Contrato; c) Si vende, enajena, arrienda, cambia de lugar o constituye algún gravamen sobre los bienes dados en garantía; d) Si los bienes materia de la garantía fueren objeto de embargo total o parcial, o si el valor de dichas garantías se redujera en más de un 20% (veinte por ciento); e) Si abandona la administración del negocio o no lo atiende con el debido cuidado y eficiencia; f) Si se presentan conflictos o situaciones de cualquier naturaleza que afecten el buen funcionamiento de su negocio o menoscaben las garantías establecidas; g) Si deja de cubrir puntualmente el pago de impuestos, derechos, cuotas correspondientes al IMSS, INFONAVIT, SAR o de cualquier otra prestación fiscal a su cargo; h) Si no entrega a la ACREDITANTE y/o a la MANDATARIA O INGENIO la información contable y financiera, establecida; i) Si no se ratificare el presente contrato y se inscribiere en el Registro Público correspondiente; j) Si no da las facilidades necesarias al interventor que designe la ACREDITANTE o la MANDATARIA O INGENIO o Financiera Nacional de Desarrollo Agropecuario, Rural Forestal y Pesquero(antes Financiera Rural), para el cumplimiento de su cometido, o si no paga puntualmente su remuneración y los gastos que dicha intervención origine; k) Si en cualquier tiempo y por cualquier motivo se denuncia el presente Contrato por la ACREDITANTE o la Agropecuaria; l) Si no cumple con cualquiera de las obligaciones contenidas en el presente Contrato; y, m) Por cualquier otra causa estipulada en el presente Contrato o derivada de la ley.
+DÉCIMA SEGUNDA.- GARANTÍA ESPECÍFICA. En garantía del pago del crédito recibido por el ACREDITADO, éste constituye prenda sin transmisión de posesión a favor de la ACREDITANTE, sobre los bienes por adquirir hasta por el importe del costo total de la inversión, de conformidad a lo dispuesto en la Sección VII del Título II  de la Ley General de Títulos y Operaciones de Crédito, sobre:
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="500" width="572" height="189" uuid="f3c28448-8758-45b0-af49-7d6493e780ca"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<text><![CDATA[a) Para los efectos de lo previsto en el artículo 354 de dicho ordenamiento legal, se entienden pignorados el total de las cantidades que correspondan al ACREDITADO por concepto de pre liquidaciones y/o liquidaciones de la caña de azúcar, en términos de lo establecido en la Ley de Desarrollo Sustentable de la Caña de Azúcar; y el total de la caña de azúcar, así como los frutos, materiales y productos pendientes o futuros que se obtengan, ya obtenidos, o se transformen con el crédito concedido, incluyendo en su caso la maquinaria y sus refacciones; b) Se entiende que se dieron en prenda los bienes mencionados en términos de lo dispuesto en la fracción III del artículo 355 de la misma Ley; c) Expresamente convienen las partes que el ACREDITADO no podrá percibir y utilizar los frutos y productos de los bienes pignorados, ni enajenarlos en forma distinta a la prevista en el presente instrumento; d) Los bienes y derechos pignorados deberán permanecer, en tanto no se haga la entrega de la caña de azúcar, en el predio mencionado en la Declaración II, inciso d) de este contrato y expresamente autorizan a la ACREDITANTE para ceder los derechos a su vez a su Acreditante (LA FINANCIERA); e) El ACREDITADO deberá proporcionar a la ACREDITANTE, en el momento en que ésta lo solicite, toda la información relativa al proceso de siembra, cultivo y cosecha de la caña de azúcar, precisando sus características; f) Bajo ninguna circunstancia las partes podrán constituir una segunda prenda sobre los bienes y derechos pignorados, salvo a favor de LA FINANCIERA; ]]></text>
+			</staticText>
+			<break>
+				<reportElement x="0" y="690" width="99" height="1" uuid="b9f3e410-d0ef-4ea3-a5c7-5fdb350409d0"/>
+			</break>
+		</band>
+		<band height="721">
+			<staticText>
+				<reportElement x="0" y="0" width="572" height="650" uuid="f7b88d63-a8e2-4e79-bd21-f3ca2c2b55d4"/>
+				<textElement textAlignment="Justified">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[g) Para los efectos de lo dispuesto en el artículo 363 de la Ley General de Títulos y Operaciones de Crédito, las partes convienen en que realizará las funciones periciales ahí previstas la persona que para tal efecto designe la ACREDITANTE, Financiera Nacional de Desarrollo Agropecuario, Rural Forestal y Pesquero(antes Financiera Rural)o el INGENIO. El ACREDITADO se considerará como Depositario de los bienes indicados hasta su entrega al INGENIO, momento en que pasará la Depositaría a cargo de éste último; la cual subsistirá hasta que el crédito y sus accesorios sean completamente liquidados. En este acto cada depositario acepta en su momento su cargo, que desempeñarán sin derecho a retribución alguna y protestan el leal y fiel desempeño del mismo, por lo que enterados de tales circunstancias también se les considera para efectos de responsabilidad civil y penal como depositarios judiciales de dichos bienes. 
+
+Asimismo se conviene en que LA FINANCIERA podrá en caso de incumplimiento, remover libremente a los Depositarios.
+En términos de lo dispuesto en la fracción III del artículo 356 de la Ley General de Títulos y Operaciones de Crédito, la ACREDITANTE autoriza expresamente al ACREDITADO para que en términos del Contrato Uniforme referido en Declaraciones, enajene y entregue al INGENIO, la caña de azúcar referida en dicho Contrato, en el entendido de que las cantidades de la pre-liquidación y/o liquidación, sustituirán la prenda constituida sobre la caña de azúcar y el INGENIO aplicará esas cantidades conforme a lo indicado en la cláusula Pago del producto.
+CESIÓN DE DERECHOS. Las partes manifiestan su conformidad en este acto para que los derechos correspondientes al presente contrato incluyendo sus garantías y los pagarés suscritos, sean cedidos y endosados en garantía a favor de la  Financiera Nacional de Desarrollo Agropecuario, Rural Forestal y Pesquero (antes Financiera Rural) por el 100% del costo total de la inversión, entregando al respecto un certificado de depósito de títulos en administración firmado en lo personal por el representante legal de la ACREDITANTE.
+FUENTE ALTERNA DE PAGO. Previo a la disposición del crédito, al ACREDITADO entregará a la ACREDITANTE una cantidad en efectivo mínima equivalente al menos al 15% del importe del crédito, con el propósito de que dicho importe sea aportado por la ACREDITANTE por cuenta y orden del ACREDITADO, al Fideicomiso constituido como fuente alterna de pago, como garantía liquida para el pago puntual y oportuno del crédito y sus accesorios. En este acto el ACREDITADO autoriza en forma irrevocable a la ACREDITANTE para que ésta, en caso de incumplimiento del ACREDITADO en sus pagos, solicite al Fiduciario del Fideicomiso, para que aplique en forma incondicional y como fuente alterna de pago, el importe de dicha garantía líquida para cubrir hasta donde alcance, el pago del crédito y sus accesorios. Dichos recursos le serán reembolsados al ACREDITADO a través de la ACREDITANTE, una vez que esta última cubra el saldo total del crédito y sus accesorios otorgados a su vez por LA FINANCIERA.
+GARANTÍA LÍQUIDA.- EL ACREDITADO garantiza a LA ACREDITANTE el pago puntual y preferente del monto del crédito otorgado en el presente contrato mediante garantía líquida como fuente alterna de pago, para que en caso de incumplimiento de sus obligaciones asumidas en el presente instrumento, se pague a LA ACREDITANTE de manera complementaria el capital del presente crédito por el porcentaje de al menos el 15% del monto a ministrar del crédito aprobado.
+DÉCIMA TERCERA.- PAGO DEL PRODUCTO. La pre-liquidación y/o liquidación de la caña de azúcar y/o en su caso de los fletes por su transporte, como materia prima para la industria azucarera, la efectuará la MANDATARIA O INGENIO a la ACREDITANTE dentro del plazo y en los términos y condiciones fijados por las disposiciones legales y de acuerdo con el precio vigente señalado, atendiendo en todo momento lo estipulado en la cláusula Novena de este instrumento. El MANDATARIO deberá cumplir en tiempo y forma con la retención y entero a LA FINANCIERA de los importes de las pre-liquidaciones y/o liquidaciones que correspondan en los términos aquí pactados. En caso de incumplimiento por parte de EL INGENIO del entero de la suma correspondiente aquí señalada, sin perjuicio de la responsabilidad respectiva y a más tardar una vez concluido el plazo de vigencia de cada ciclo del presente contrato, EL INGENIO se obliga a pagar a LA AGROPECUARIA el importe insoluto del capital e intereses del crédito en comento, mediante certificados de depósito de azúcar y bonos de prenda que amparen azúcar, emitidos por un Almacén General de Depósito aprobado por la  Financiera Nacional de Desarrollo Agropecuario, Rural Forestal y Pesquero(antes Financiera Rural) y autorizado en términos de lo dispuesto por la Ley General de Organizaciones y Actividades Auxiliares del Crédito y demás disposiciones aplicable.     De igual forma para los casos de Ingenios administrados por el Gobierno Federal, estos se obligan antes del desembolso de los recursos para el supuesto de desincorporación, venta o devolución de alguna de las unidades expropiadas a constituir con apoyo del Fideicomiso Comercializador (FICO) garantía y/o fuente alterna de pago para que conjuntamente con las garantías liquidas ya aportadas, guarden una proporción por lo menos de 1 a 1con respecto al saldo insoluto del crédito. Los Certificados de Azúcar que se produzcan al amparo de este financiamiento no podrán ser utilizados para obtener otros financiamientos.
+DÉCIMA CUARTA.- RESTRICCIÓN Y DENUNCIA. La ACREDITANTE, en los términos del artículo 294 de la Ley General de Títulos y Operaciones de Crédito, se reserva expresamente el derecho de restringir el plazo o el importe del crédito o ambos a la vez o denunciar este Contrato mediante simple comunicación escrita dirigida al ACREDITADO, para lo cual éste expresa su conformidad y en cuyo caso se extinguirá el crédito en la parte no dispuesta. En caso de que el importe del crédito se restrinja, el ACREDITADO no podrá disponer del resto del crédito según lo establecido en este Contrato.]]></text>
+			</staticText>
+			<break>
+				<reportElement x="0" y="713" width="100" height="1" uuid="35269ee4-1a6d-447d-918d-7d04adbf9773"/>
+			</break>
+		</band>
+		<band height="731">
+			<staticText>
+				<reportElement x="0" y="0" width="572" height="200" uuid="360c62cd-c3fa-4a41-a97a-324d4f6badc5"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<text><![CDATA[DÉCIMA QUINTA.- VIGILANCIA. La ACREDITANTE y/ o el INGENIO y/o Financiera Nacional de Desarrollo Agropecuario, Rural Forestal y Pesquero(antes Financiera Rural) y/o cualquier entidad nacional o internacional que haya participado en el fondeo del crédito, tendrá la facultad durante todo el tiempo de su vigencia, de designar a un interventor que cuide el exacto cumplimiento de las obligaciones del ACREDITADO, principalmente en lo que se refiere a la vigilancia de la debida inversión de fondos, del debido funcionamiento de la empresa y del cuidado y conservación de las garantías otorgadas. El sueldo y los gastos que erogue el interventor serán cubiertos por el ACREDITADO. 
+DÉCIMA SEXTA.-LEYES APLICABLES, JURISDICCIÓN Y PROCEDIMIENTO JUDICIAL. Para el conocimiento de cualquier controversia que se llegue a suscitar con motivo de la interpretación, cumplimiento y ejecución del presente Contrato, las partes estarán a lo dispuesto por la Ley de Instituciones de Crédito, la Ley General de Títulos y Operaciones de Crédito y demás leyes aplicables. Asimismo en caso de proceder judicialmente, las partes contratantes renuncian expresamente a cualquier jurisdicción que pudiera corresponderles por razón territorial y se someten a la competencia de los Tribunales radicados en la ciudad de México, Distrito Federal. 
+DÉCIMA SEPTIMA.- Las partes acuerdan que el crédito y sus accesorios que en este acto se concede serán retenidos y enterado a la Financiera Nacional de Desarrollo Agropecuario, RURAL, Forestal y Pesquero (LA FINANCIERA) por el INGENIO en su carácter de MANDATARIA de la ACREDITANTE, en los términos que se describen en el presente instrumento.
+DÉCIMA OCTAVA.-DOMICILIOS. Para los efectos judiciales y extrajudiciales relativos al presente Contrato las partes señalan como sus domicilios, los siguientes:
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="270" width="572" height="180" uuid="eb7ee93f-1673-48cd-a27e-f41f6a9b01f1"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<text><![CDATA[En caso que el ACREDITADO cambie de domicilio, deberá notificarlo por escrito a la ACREDITANTE y a EL INGENIO, en caso contrario los emplazamientos y demás diligencias judiciales o extrajudiciales se practicarán válidamente en el domicilio señalado en esta Cláusula.
+
+VIGESIMA.- GASTOS. El ACREDITADO se obliga a pagar todos los derechos, gastos, honorarios e impuestos que origine la celebración de este Contrato, incluyendo los relativos a su ratificación ante Fedatario Público y su inscripción y cancelación en el Registro Público respectivo.
+
+VIGÉSIMA PRIMERA.- CASO FORTUITO. El ACREDITADO se obliga al cumplimiento del presente Contrato aún en caso fortuito o de fuerza mayor, en términos de lo dispuesto por el artículo 2111 del Código Civil para el Distrito Federal y sus correlativos de cualquier Estado de la República.
+
+Enterados de su contenido, alcances y fuerza legal se firma el presente Contrato en tres tantos por las partes que en él intervienen, ante la presencia de dos testigos, en la ciudad de Huixtla, Chiapas,
+Enterados de su contenido, alcances y fuerza legal se firma el presente Contrato en tres tantos por las partes que en él intervienen, ante la presencia de dos testigos, en la ciudad de Huixtla, Chiapas, A LOS 23 DIAS DEL MES DE DICIEMBRE DE 2014.
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="450" width="198" height="60" uuid="c5b95ae7-56eb-4a23-9018-6222a4be7522"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<text><![CDATA["MANDANTE O ACREDITANTE"
+
+UNION LOCAL DE PRODUCTORES DE CAÑA DE AZUCAR C.N.C. HUIXTLA  A.C.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="350" y="450" width="198" height="60" uuid="d1c47db5-c7a8-48dd-a20c-c7c9b9446020"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<text><![CDATA["ACREDITADO"
+
+POR SU PROPIO DERECHO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="522" width="198" height="19" uuid="400bff7b-eb61-455c-8d8c-9b35dfad5e7c"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<text><![CDATA[ABRAHAM ESCOBAR ARIAS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="552" width="198" height="19" uuid="919407fc-2fd4-4f13-88c3-a6ca2e497324"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<text><![CDATA["TESTIGO"]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="603" width="199" height="19" uuid="e28ab6d2-83c6-4f73-8fe3-b89d285bbfe9"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<text><![CDATA[C. UBERCLAIN GORDILLO VASQUEZ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="350" y="553" width="198" height="19" uuid="23242c8c-e2b9-4c95-b7f7-75afee74c1a6"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<text><![CDATA["TESTIGO"]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="350" y="604" width="199" height="19" uuid="18fef319-d8db-4cde-b6e4-35f81e7cd789"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<text><![CDATA[C. HIPOLITO VAZQUEZ ALVAREZ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="350" y="522" width="198" height="19" uuid="14cb8922-d3f7-4ae8-9d55-1017da74e78a"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{prod}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="207" width="572" height="18" uuid="3d0ccfd7-f5ca-4507-b977-f118a28f0310"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<text><![CDATA[LA MANDANTEO ACREDITANTE: Av. Aldama y Allende Pte. No. 5, Col. Centro, Huixtla, Chiapas.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="226" width="572" height="18" uuid="a8b085ce-2c14-49d2-84fa-0ed572141cc2"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<text><![CDATA[LA MANDATARIO O INGENIO: El ubicado en  Km. 335 Carretera Federal Fortín -Córdoba, Córdoba Veracruz.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="244" width="572" height="20" uuid="6cba5502-bc7a-4ac1-aae4-ee7ba7047870"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["EL ACREDITADO: "+$P{ubprod}]]></textFieldExpression>
+			</textField>
+			<break>
+				<reportElement x="0" y="726" width="100" height="1" uuid="0b32c926-418f-492c-99c3-41c34df562e2"/>
+			</break>
+		</band>
+		<band height="731">
+			<staticText>
+				<reportElement x="0" y="27" width="572" height="23" uuid="e2d012e6-4bb0-44a6-b04f-8b7d71d816ca"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SOLICITUD DE RETENCION]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="60" width="572" height="120" uuid="0ce31625-edc2-483a-8a7b-172b182ed60b"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<text><![CDATA[EL ASOCIADO DE LA ORGANIZACIÓN DENOMINADA “UNIÓN LOCAL DE PRODUCTORES DE CAÑA DE AZÚCAR C.N.C. DEL INGENIO HUIXTLA A.C.” (EN ADELANTE LA ORGANIZACIÓN), CUYO NOMBRE Y FIRMA APARECE AL CALCE DELA PRESENTE Y QUE TIENE CELEBRADO CONTRATO UNIFORME DE COMPRA-VENTA Y DE SIEMBRA, CULTIVO, COSECHA, ENTREGA Y RECEPCIÓN DE CAÑA DE AZÚCAR (CONTRATO UNIFORME) CON EL “ INGENIO DE HUIXTLA S.A. DE C.V.” (EN ADELANTE EL INGENIO), INSTRUYE EN ESTE ACTO, DE FORMA IRREVOCABLE, A EL INGENIO, PARA QUE ÉSTE LLEVE A CABO LOS SIGUIENTES ACTOS NECESARIOS PARA EL CUMPLIMIENTO DE LAS OBLIGACIONES DE PAGO DERIVADAS DEL  CONTRATO DE APERTURA DE CRÉDITO EN CUENTA CORRIENTE PARA DESCUENTO DE CARTERA NÚMERO 606700000910000 DE FECHA 22 DE DICIEMBRE DE 2014, QUE CELEBRÓ LA ORGANIZACIÓN DE LA QUE SOY MIEMBRO CON LA FINANCIERA NACIONAL DE DESARROLLO AGROPECUARIO, RURAL, FORESTAL Y PESQUERO:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="180" width="572" height="90" uuid="692a17e9-389e-4109-86c4-20f18da3029d"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["PARA QUE DEL CONTRATO DE ABASTECIMIENTO QUE TIENE CELEBRADO EL ASOCIADO ACREDITADO CON  EL INGENIO, ÉSTE RETENGA, DE LAS CANTIDADES QUE LE CORRESPONDAN AL ASOCIADO DE LA ORGANIZACION POR CONCEPTO DE ALCANCES DE LA PRELIQUIDACIÓN Y LIQUIDACIÓN DE LA CAÑA DE AZÚCAR, UN PORCENTAJE IGUAL AL 30% (EL PORCENTAJE ESTARÁ EN FUNCIÓN DE LOS INGRESOS ESTIMADOS A OBTENER Y DEL IMPORTE DEL CRÉDITO RECIBIDO),  PARA SER APLICADOS CONTABLEMENTE AL PAGO DE CAPITAL E INTERESES QUE EN SU CASO SE GENEREN DEL CONTRATO DE APERTURA DE CRÉDITO "+$P{cartera}+" DE FECHA 23 DE DICIEMBRE DE 2014 QUE EL ASOCIADO TIENE CELEBRADO CON LA ORGANIZACIÓN."]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="270" width="572" height="200" uuid="83276b47-16b1-4a47-9c06-d16a00c13d3c"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<text><![CDATA[SI AL FINALIZAR EL PLAZO DEL CRÉDITO CONTINÚA HABIENDO FALTANTES, EL ASOCIADO AUTORIZA A EL INGENIO PARA QUE DESCUENTE, A PRORRATA, DE LOS ALCANCES DE LA LIQUIDACIÓN FINAL QUE LE CORRESPONDAN EL MONTO CORRESPONDIENTE.
+ASIMISMO, EN ESTE ACTO SE AUTORIZA A EL INGENIO PARA INCREMENTAR EL PORCENTAJE DE RETENCIÓN, EN EL SUPUESTO DE QUE LOS PORCENTAJES RETENIDOS EN  LOS TÉRMINOS DEL PÁRRAFO ANTERIOR NO SEAN SUFICIENTES PARA CUBRIR EL MONTO DEL CRÉDITO CONTRATADO CON LA UNIÒN LOCAL DE PRODUCTORES DE CAÑA DE AZÙCAR CNC, DEL INGENIO HUIXTLA A.C.
+EL INGENIO REALIZARÁ LA RETENCIÓN A QUE SE REFIERE ESTE DOCUMENTO EN LA FECHA EN QUE REALICE EL PAGO DE LOS ALCANCES DE LA PRELIQUIDACIÓN O LIQUIDACIÓN FINAL DE LA CAÑA DE AZÚCAR QUE HAYA ADQUIRIDO DEL ASOCIADO DE LA ORGANIZACIÓN.
+EL ASOSOCIADO DE LA ORGANIZACIÓN Y LA ORGANIZACIÓN INSTRUYEN EN ESTE ACTO, DE FORMA IRREVOCABLE, A EL INGENIO PARA  QUE EL MONTO DE LA RETENCIÓN QUE SE REALICE AL AMPARO DEL PRESENTE DOCUMENTO, LO ENTERE A LA FINANCIERA NACIONAL DE DESARROLLO AGROPECUARIO, RURAL, FORESTAL Y PESQUERO (ANTES “FINANCIERA RURAL”) PARA QUE ÉSTA LO APLIQUE AL PAGO DE CAPITAL E INTERESES QUE SE GENEREN DEL CONTRATO DE APERTURA DE CRÉDITO EN CUENTA CORRIENTE PARA DESCUENTO DE CARTERA NÚMERO 606700000910000 DE FECHA 22 DE DICIEMBRE DE 2014  EN LA CUENTA CONVENIO CIE 627992 DE BBVA BANCOMER, S.A.
+]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="470" width="572" height="20" uuid="b6925203-b488-4c2a-b48c-7ed040de4c7d"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["EN LA CIUDAD DE HUIXTLA, CHIAPAS  A LOS "+$P{fecha}+"."]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="10" y="540" width="165" height="57" uuid="c3678ae5-619f-4b84-b0c3-bf677fc1f034"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<text><![CDATA[MIEMBRO DE LA UNION LOCAL DE PRODUCTORES DE CAÑA DE AZUCAR C.N.C. DEL INGENIO HUIXTLA  A.C]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="10" y="620" width="165" height="24" uuid="6067d31e-96d2-4365-87e0-b280fe979942"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{prod}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="383" y="520" width="165" height="57" uuid="b3539d64-e373-44b7-80d6-48019960d8df"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<text><![CDATA[UNION LOCAL DE RODUCTORES DE CAÑA DE AZUCAR, C.N.C. DEL INGENIO HUIXTLA  A.C]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="383" y="620" width="165" height="24" uuid="dceb145d-0c80-4fac-9de4-4e1ab67faba0"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[C. ABRAHAM ESCOBAR ARIAS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="496" width="165" height="24" uuid="bb98e19b-dcf0-47e5-a278-58d07e71b4b5"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA["LA ASOCIACION"]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="500" width="165" height="20" uuid="8f422b90-6b94-4f29-a4ce-b18f97ed8dd9"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[PRODUCTOR ACREDITADO]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="10" y="520" width="165" height="24" uuid="9a0373ff-5258-4394-ba17-c790492111e6"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["CLAVE: "+$P{cve}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="479" y="0" width="70" height="20" forecolor="#000000" uuid="e7c8c91e-1967-4a49-b92c-3f8f580c9f3a"/>
+				<textElement textAlignment="Right">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["PÁGINA " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="520" y="0" width="52" height="20" forecolor="#000000" uuid="062d9552-b729-4704-b583-f4698171092e"/>
+				<textElement textAlignment="Right">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" DE " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

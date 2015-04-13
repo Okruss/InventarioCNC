@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.0.3.final using JasperReports Library version 6.0.3  -->
+<!-- 2015-03-30T10:12:53 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="pagare" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="1a7c47ff-ed30-4c79-bd30-486379c0d09d">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="folioPag" class="java.lang.String"/>
+	<parameter name="monto" class="java.lang.String"/>
+	<parameter name="letra" class="java.lang.String"/>
+	<parameter name="prod" class="java.lang.String"/>
+	<parameter name="domprod" class="java.lang.String"/>
+	<parameter name="fecha" class="java.lang.String"/>
+	<parameter name="cve" class="java.lang.String"/>
+	<parameter name="por" class="java.lang.String"/>
+	<parameter name="montoSeg" class="java.lang.String"/>
+	<parameter name="letraSeg" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<detail>
+		<band height="587" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="572" height="15" uuid="2c10c5e7-6838-455b-b11b-f138e41dcafc"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PAGARÉ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="15" width="572" height="20" uuid="de2eefc4-3a04-45fa-8794-3606dc20ec74"/>
+				<textElement textAlignment="Right">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["FOLIO: "+$P{folioPag}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="40" width="572" height="70" uuid="0e3d6d40-ac62-4e87-aa3e-ced2fbfb28be"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA["POR ESTE PAGARÉ NOS OBLIGAMOS A PAGAR INCONDICIONALMENTE A LA ORDEN DE UNIÓN LOCAL DE PRODUCTORES DE CAÑA DE AZÚCAR C.N.C. DEL INGENIO HUIXTLA A.C., EN SUS OFICINAS UBICADAS EN AV. ALDAMA Y CALLE ALLENDE PONIENTE N°5, COL. CENTRO, EN HUIXTLA, CHIAPAS, C.P. 30640, EL IMPORTE DEL PRESENTE PAGARÉ RECIBIDO A NUESTRA ENTERA SATISFACCIÓN COMO ÚNICA DISPOSICIÓN POR LA CANTIDAD DE $"+$P{monto}+" ("+$P{letra}+" ) PRECISAMENTE EL DÍA 31 DE AGOSTO DE 2016."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="110" width="572" height="36" uuid="e96866d5-16f9-49af-8f11-9a6cb892f15f"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA["EL IMPORTE DE ESTE PAGARE CAUSARÁ LOS INTERESES ORDINARIOS Y EN SU CASO LOS MORATORIOS PREVISTOS EN EL CONTRATO REFERIDO MAS ADELANTE, DE ACUERDO A LO SIGUIENTE:"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="204" width="572" height="41" uuid="2ca5caa0-5c44-4974-a310-5d3c46cf0779"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial" size="10"/>
+				</textElement>
+				<text><![CDATA[EN CASO DE MORA EN EL PAGO DE LAS OBLIGACIONES ASUMIDAS, SE PAGARÁN INTERESES MORATORIOS SOBRE SALDOS INSOLUTOS A LA TASA QUE SEA RESULTADO DE MULTIPLICAR LA TASA DE INTERÉS ORDINARIA APLICABLE POR 2.5 (DOS PUNTO CINCO).]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="304" width="572" height="30" uuid="d016b3c7-6705-47af-9e0f-0695d8ddb780"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA["EL PRESENTE PAGARÉ SE SUSCRIBE EN HUIXTLA, CHIAPAS, A LOS "+$P{fecha}+"."]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="334" width="572" height="39" uuid="4d2291cc-0e7e-44f8-97eb-8980b92ffec5"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[“SUSCRIPTOR”
+
+POR SU PROPIO DERECHO
+]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="394" width="572" height="16" uuid="2bacdf8f-332a-4ee8-9e89-541e5b3b43e9"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{prod}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-1" y="460" width="572" height="30" uuid="ff0c766e-5281-4162-93aa-60d3f2165b06"/>
+				<textElement textAlignment="Left">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA["DOMICILIO: "+$P{domprod}]]></textFieldExpression>
+			</textField>
+			<break>
+				<reportElement x="0" y="518" width="97" height="1" uuid="36be6184-164a-4856-81da-d86cefab659e"/>
+			</break>
+			<textField>
+				<reportElement x="0" y="146" width="572" height="58" uuid="04040829-d49a-4639-9779-eabf52adeb31"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA["LAS TASAS NOMINALES DE INTERÉS SE DETERMINARAN A RAZÓN DE UNA TASA DE INTERÉS FIJA DEL "+$P{por}+"% ANUAL, LOS CUALES CUBREN EL PAGO DEL INTERES A LA UNIÓN LOCAL DE PRODUCTORES DE CAÑA DE AZÚCAR C.N.C. DEL INGENIO HUIXTLA A.C."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="410" width="572" height="30" uuid="7560a2c9-955c-4030-afbe-8fdb47a59985"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{cve}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Transparent" x="0" y="245" width="572" height="59" forecolor="#000000" backcolor="#FFFFFF" uuid="c3613501-29f7-475a-a852-a5adf31f5c88"/>
+				<box padding="0" topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+				<textElement textAlignment="Justified" verticalAlignment="Top" rotation="None" markup="none">
+					<font fontName="Arial" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single" lineSpacingSize="1.0" firstLineIndent="0" leftIndent="0" rightIndent="0" spacingBefore="0" spacingAfter="0" tabStopWidth="40"/>
+				</textElement>
+				<textFieldExpression><![CDATA["ESTE PAGARÉ ES CAUSAL Y SE ENCUENTRA RELACIONADO CON EL CONTRATO DE APERTURA DE CRÉDITO SIMPLE CON GARANTÍAS, CELEBRADO EL 23 DE DICIEMBRE DE 2014 , ENTRE UNION LOCAL DE PRODUCTORES DE CAÑA DE AZUCAR C.N.C. DEL INGENIO HUIXTLA A.C., COMO ACREEDOR; Y EL C. "+$P{prod}+" , COMO ACREDITADO."]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="652">
+			<staticText>
+				<reportElement x="0" y="0" width="572" height="20" uuid="2ebeddd4-039b-41b0-8702-8d524a59f381"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SOLICITUD DE RETENCION]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="40" width="572" height="48" uuid="d647c12f-97b0-4edd-9647-32a16c7dca13"/>
+				<textElement textAlignment="Left">
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ING. ENRIQUE VIVANCO LOZANO
+REPRESENTANTE LEGAL DEL INGENIO DE HUIXTLA S.A. DE C.V.
+PRESENTE: 
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="100" width="572" height="87" uuid="4e78200b-add9-43b4-8b7e-65ddbb51a8fa"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial" size="11"/>
+				</textElement>
+				<text><![CDATA[EN VIRTUD DEL CONVENIO DE RETENCIÒN CELEBRADO ENTRE Y EL INGENIO DE HUIXTLA S.A. DE C.V. ATRAVES DE SU PERSONA Y LA UNIÓN LOCAL DE PRODUCTORES DE CAÑA DE AZÚCAR CNC, DEL INGENIO HUIXTLA A.C., DERIVADO DEL CONTRATO DE APERTURA DE CRÉDITO EN CUENTA CORRIENTE PARA DESCUENTO DE CARTERA NUMERO 606700000910000 QUE A SU VEZ CELEBRO ESTA ASOCIACIÒN DE LA LEY QUE SOY MIEMBRO, CON LA FINANCIERA NACIONAL DE DESARROLLO AGROPECUARIO, RURAL, FORESTAL Y PESQUERO (ANTES FINANCIERA RURAL) ACUDO A USTED PARA MANIFESTAR:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="200" width="572" height="110" uuid="9deff06a-c436-4f19-8794-6c8ef7714030"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["QUE POR ESTE MEDIO EXPRESO MI ENTERO CONSENTIMIENTO PARA QUE ME SEA RETENIDA DE LOS ALCANCES QUE  OBTENGA  POR  CONCEPTO  DEL  PAGO  INTEGRAL  DE  LA  CAÑA ENTREGADA  A  ESE  INGENIO  DURANTE LA  ZAFRA  2015-2016,  LA  CANTIDAD   DE   $"+$P{monto}+"("+$P{letra}+"), SOLICITANDO SEA  ABONADA  TAL  CANTIDAD  EN  LA  CUENTA  NUMERO 0165472407 DE LA INSTITUCIÒN BANCARIA  BBVA BANCOMER A FAVOR DE LA UNION LOCAL DE PRODUCTORES DE CANA DE AZUCAR CNC, DEL INGENIO HUIXTLA A.C., MAS LOS INTERESES QUE SE GENEREN HASTA LA FECHA,  MISMA  QUE  SERVIRÀ  COMO ABONO DEL CRÈDITO CON EL QUE LA CONTENGA."]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="310" width="572" height="30" uuid="629c44e0-c97e-49e8-8e51-93d9779bde0c"/>
+				<textElement textAlignment="Justified">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[UNA VEZ EFECTUADA LA OPERACIÓN SOLICITADA PIDO SE ME EXTIENDA UN DUPLICADO DEL DOCUMENTO QUE LA CONTENGA.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="418" width="180" height="16" uuid="fccb3cdc-0c59-443b-9f65-0a3e73baf86e"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="11"/>
+				</textElement>
+				<text><![CDATA[PRODUCTOR ACREDITADO]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="434" width="180" height="19" uuid="82eb8e83-703e-4ea4-8d57-a7933b832ccd"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA["CLAVE: "+$P{cve}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="453" width="180" height="48" uuid="28fabc67-59f6-4c3e-8cfe-eae8a29f15c7"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA["MIEMBRO DE LA UNIÓN LOCAL DE PRODUCTORES DE CAÑA DE AZÚCAR, CNC DEL INGENIO HUIXTLA A.C."]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="380" y="418" width="192" height="16" uuid="fe2c9109-7235-4775-9c91-c069fc843f6a"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="11"/>
+				</textElement>
+				<text><![CDATA[LA ASOCIACIÓN]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="380" y="453" width="192" height="48" uuid="0d391791-7fd3-4f35-89d8-a1e27a245219"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA["UNIÓN LOCAL DE PRODUCTORES DE CAÑA DE AZÚCAR, CNC DEL INGENIO HUIXTLA A.C."]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="380" y="539" width="191" height="24" uuid="fe94722f-59e9-4507-a11d-c16086b886c7"/>
+				<textElement>
+					<font fontName="Arial" size="11"/>
+				</textElement>
+				<text><![CDATA[C. ABRAHAM ESCOBAR ARIAS]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="539" width="179" height="23" uuid="7d9394aa-70dc-480a-9517-62bf2768568b"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{prod}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="359" width="571" height="21" uuid="334cbbba-1979-4b4a-b506-2c871df2cd7b"/>
+				<textElement>
+					<font fontName="Arial" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["HUIXTLA, CHIAPAS A "+$P{fecha}]]></textFieldExpression>
+			</textField>
+			<break>
+				<reportElement x="0" y="609" width="100" height="1" uuid="e258e4d6-451d-4869-b2b9-e2008a28317a"/>
+			</break>
+		</band>
+		<band height="702">
+			<textField>
+				<reportElement x="0" y="10" width="572" height="30" uuid="3f79210c-38bf-4314-8d1b-94e49fd1a05e"/>
+				<textElement textAlignment="Right">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["No. "+$P{folioPag}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="50" width="572" height="20" uuid="9f982e7f-5cb8-454c-a7b0-e8150a4d0c12"/>
+				<textElement textAlignment="Left">
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["HUIXTLA, CHIAPAS; A LOS "+$P{fecha}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="100" width="572" height="70" uuid="fcbdfcf3-ca2e-4b1d-bd69-7d7d8daeee10"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Recibí de la UNIÓN LOCAL DE PRODUCTORES DE CAÑA DE AZUCAR CNC DEL INGENIO HUIXTLA, A.C. la cantidad de $"+$P{montoSeg}+" ("+$P{letraSeg}+")"+" por Concepto de PRÉSTAMO PERSONAL."]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="170" width="572" height="30" uuid="36ff4bb3-76d9-48d6-8155-096ba87675aa"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[(Especifique): Para pago de aportación de seguro agrícola del crédito AVIO.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="200" width="572" height="90" uuid="cf5f69ef-98eb-4907-852c-aa22bd76fca7"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<text><![CDATA[Para efectos del préstamo personal, Autorizo al INGENIO DE HUIXTLA, S.A. DE C.V. para que retenga el importe antes referido de mis alcances en la Pre-Liquidación y/o Liquidación final de la Zafra 2015- 2016 y deposite a la cuenta de la UNIÓN LOCAL DE PRODUCTORES DE CAÑA DE AZUCAR C.N.C. DEL INGENIO HUIXTLA, A.C.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="80" y="430" width="400" height="30" uuid="1d8a5703-df44-424d-a1f9-a162d8f44614"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{prod}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="372" width="572" height="30" uuid="8c4e6352-04e9-4ea1-8d25-c6791343f820"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[RECIBÍ DE CONFORMIDAD]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="179" y="480" width="201" height="20" uuid="b4da6031-d27d-4f6f-a156-8eb2ee619aaa"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[AUTORIZÓ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="530" width="200" height="20" uuid="075c3af5-287f-470f-a9dd-612715ab41b6"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[SECRETARIO DE FINANZAS]]></text>
+			</staticText>
+			<line>
+				<reportElement x="179" y="530" width="201" height="1" uuid="15441905-7566-4691-a3e7-a820db0c383f"/>
+			</line>
+			<line>
+				<reportElement x="179" y="430" width="201" height="1" uuid="9976e0d4-b167-48df-b28b-5da5fb9858f5"/>
+			</line>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="49" splitType="Stretch"/>
+	</pageFooter>
+</jasperReport>
