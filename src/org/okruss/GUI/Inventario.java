@@ -18,6 +18,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.image.BufferedImage;
+import java.io.File;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
@@ -168,8 +169,11 @@ public class Inventario extends javax.swing.JFrame {
         folio = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         nombre = new javax.swing.JTextField();
+        usuario = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
 
         pop.setText("Corregir Registro");
@@ -533,7 +537,24 @@ public class Inventario extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jMenu1.setText("File");
+        jMenu1.setText("Archivo");
+
+        jMenuItem1.setText("Reporte Semanal");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem1);
+
+        jMenuItem2.setText("Reporte Entradas Bodega");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem2);
+
         jMenuBar1.add(jMenu1);
 
         jMenu2.setText("Edit");
@@ -554,7 +575,10 @@ public class Inventario extends javax.swing.JFrame {
                         .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 367, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, 387, Short.MAX_VALUE))
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(usuario, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -566,8 +590,10 @@ public class Inventario extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel1)
+                    .addComponent(usuario, javax.swing.GroupLayout.DEFAULT_SIZE, 22, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -882,12 +908,24 @@ public class Inventario extends javax.swing.JFrame {
          int cant=0;
          String producto=tablaInsu.getValueAt(tablaInsu.getSelectedRow(),1).toString();
          cant=Integer.parseInt(JOptionPane.showInputDialog(null,"Cantidad:",producto,JOptionPane.QUESTION_MESSAGE ));
-         System.out.println(""+producto+" "+cant);
+//         System.out.println(""+producto+" "+cant);
          stmt=(Statement) cone.conexion();
          try {
              stmt.getConnection();
              stmt.executeUpdate("use credito");
-            stmt.executeUpdate("update ins set cant="+cant+" where descrip='"+producto+"'");
+            
+            ResultSet rs2=stmt.executeQuery("Select cant from ins where descrip='"+producto+"'");
+            String acum="";
+            while(rs2.next())
+            {
+                acum=rs2.getString(1);
+            }
+            int acum2=0;
+            acum2=Integer.parseInt(acum);
+            int entrada=acum2+cant;
+            stmt.executeUpdate("insert into bodega values ('"+tablaInsu.getValueAt(tablaInsu.getSelectedRow(),0).toString()+"',"
+                    + "'"+producto+"',"+cant+",now())");
+            stmt.executeUpdate("update ins set cant="+entrada+" where descrip='"+producto+"'");
             try
                 {
                     stmt=cone.conexion();
@@ -1068,7 +1106,7 @@ public class Inventario extends javax.swing.JFrame {
                     stmt.getConnection();
                     stmt.executeUpdate("use credito");
 
-                    ResultSet rs3=stmt.executeQuery("Select produc,cant,estatus,feEmi,feEnt  from alertinsumos where folio='"+fol+"'");
+                    ResultSet rs3=stmt.executeQuery("Select produc,cant,estatus,feEmi,feEnt  from alertinsumos where folio='"+fol+"' group by produc ");
 
                     ResultSetMetaData mD = rs3.getMetaData();
                     int ncol=mD.getColumnCount();
@@ -1100,6 +1138,7 @@ public class Inventario extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        
         String fol="";
         fol=penFol.getValueAt(penFol.getSelectedRow(),0).toString();
         
@@ -1109,6 +1148,8 @@ public class Inventario extends javax.swing.JFrame {
             stmt.getConnection();
             stmt.executeUpdate("update alertinsumos set estatus='ENTREGADO', feEnt=now() where folio='"+fol+"'");
             JOptionPane.showMessageDialog(null,"Folio "+fol+" Entregado.","inventario",JOptionPane.INFORMATION_MESSAGE);
+            reportes rep = new reportes();
+            rep.entrega(fol);
             
             //CONSULTO LOS POSIBLES FOLIOS PÉNDIENTES
                 try
@@ -1194,7 +1235,7 @@ public class Inventario extends javax.swing.JFrame {
             stmt.getConnection();
             stmt.executeUpdate("use credito");
             ResultSet rs=stmt.executeQuery("Select * from alertinsumos"
-                    + " where folio like '%"+folio.getText()+"%'");
+                    + " where folio like '%"+folio.getText()+"%' group by produc");
 
             ResultSetMetaData mD = rs.getMetaData();
             int ncol=mD.getColumnCount();
@@ -1232,7 +1273,7 @@ public class Inventario extends javax.swing.JFrame {
             stmt.getConnection();
             stmt.executeUpdate("use credito");
             ResultSet rs=stmt.executeQuery("Select * from alertinsumos"
-                    + " where nombre like '%"+nombre.getText()+"%'");
+                    + " where nombre like '%"+nombre.getText()+"%' group by produc");
 
             ResultSetMetaData mD = rs.getMetaData();
             int ncol=mD.getColumnCount();
@@ -1262,6 +1303,44 @@ public class Inventario extends javax.swing.JFrame {
         }
         
     }//GEN-LAST:event_nombreKeyTyped
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        // TODO add your handling code here:
+        reportes rep = new reportes();
+        rep.entreda_bodega();
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        // TODO add your handling code here:
+        final JProgressBar barraProgreso = new JProgressBar(0, 1000);
+        final JDialog dialogoProgreso = new JDialog(this, "Procesando...");
+        dialogoProgreso.getContentPane().add(barraProgreso);
+        dialogoProgreso.pack();
+        dialogoProgreso.setLocationRelativeTo(null);
+        
+        final javax.swing.SwingWorker worker;
+        worker = new javax.swing.SwingWorker() {
+            
+            @Override
+            protected Void doInBackground() throws Exception {
+                dialogoProgreso.setVisible(true);
+                barraProgreso.setVisible(true);
+                barraProgreso.setIndeterminate(true);
+                reportes rep = new reportes();
+                rep.semanal();
+                
+                return null;
+            }
+
+            @Override
+            protected void done() {
+                barraProgreso.setIndeterminate(false);;
+                barraProgreso.setVisible(false);
+                dialogoProgreso.setVisible(false);
+            }
+        };
+        worker.execute();
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1316,6 +1395,8 @@ public class Inventario extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
@@ -1338,5 +1419,6 @@ public class Inventario extends javax.swing.JFrame {
     private javax.swing.JMenuItem pop;
     private javax.swing.JTable tablaInsu;
     private javax.swing.JTable tablaPaque;
+    public javax.swing.JLabel usuario;
     // End of variables declaration//GEN-END:variables
 }

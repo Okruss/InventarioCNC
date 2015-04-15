@@ -26,7 +26,8 @@ import net.sf.jasperreports.view.JasperViewer;
 
 public class reportes 
 {
-    
+    conex cone = new conex();
+    Connection con;
     public void contrato (String car, String prod, String mont, String has,
             String ubca, String montT, String letra, String uprod, String cve,
             String fecha)
@@ -103,4 +104,82 @@ public class reportes
         }
     }
     
+    public void entrega (String folio)
+
+    {
+         try
+        {
+            con=cone.conexion().getConnection();
+
+            Map parameter = new HashMap();
+            parameter.put("TITULO","Entra Insumos Folio "+folio);
+            parameter.put("FOLIO",folio);
+            JasperReport report=JasperCompileManager.compileReport("reportes\\entrega_insumos.jrxml");
+            JasperPrint print=JasperFillManager.fillReport(report, parameter,con);
+            //JasperExportManager.exportReportToPdfFile(print,"C:\\tricho_zon_fecha.pdf");
+            //JasperViewer.viewReport(print,false);
+            JasperViewer visor= new JasperViewer(print,false);
+                         //visor.setTitle("Cosecha a la FEcha por Grupos");
+                         visor.setVisible(true);
+        }
+        catch (Exception e)
+        {
+            JOptionPane.showMessageDialog(null,"Ocurrio un error al generar el "
+                    + "reporte.");
+            JOptionPane.showMessageDialog(null,""+e.getMessage());
+        }
+    
+}
+    
+    public void entreda_bodega ()
+
+    {
+         try
+        {
+            con=cone.conexion().getConnection();
+
+            Map parameter = new HashMap();
+            parameter.put("TITULO","Entradas da Bodega");
+            JasperReport report=JasperCompileManager.compileReport("reportes\\entradas_bodega.jrxml");
+            JasperPrint print=JasperFillManager.fillReport(report, parameter,con);
+            //JasperExportManager.exportReportToPdfFile(print,"C:\\tricho_zon_fecha.pdf");
+            //JasperViewer.viewReport(print,false);
+            JasperViewer visor= new JasperViewer(print,false);
+                         //visor.setTitle("Cosecha a la FEcha por Grupos");
+                         visor.setVisible(true);
+        }
+        catch (Exception e)
+        {
+            JOptionPane.showMessageDialog(null,"Ocurrio un error al generar el "
+                    + "reporte.");
+            JOptionPane.showMessageDialog(null,""+e.getMessage());
+        }
+    
+}
+    
+    public void semanal ()
+
+    {
+         try
+        {
+            con=cone.conexion().getConnection();
+
+            Map parameter = new HashMap();
+            parameter.put("TITULO","Reporte Semanal");
+            JasperReport report=JasperCompileManager.compileReport("reportes\\insumo_semanal.jrxml");
+            JasperPrint print=JasperFillManager.fillReport(report, parameter,con);
+            //JasperExportManager.exportReportToPdfFile(print,"C:\\tricho_zon_fecha.pdf");
+            //JasperViewer.viewReport(print,false);
+            JasperViewer visor= new JasperViewer(print,false);
+                         //visor.setTitle("Cosecha a la FEcha por Grupos");
+                         visor.setVisible(true);
+        }
+        catch (Exception e)
+        {
+            JOptionPane.showMessageDialog(null,"Ocurrio un error al generar el "
+                    + "reporte.");
+            JOptionPane.showMessageDialog(null,""+e.getMessage());
+        }
+    
+}
 }
